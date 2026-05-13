@@ -2,7 +2,7 @@ import ctypes
 import pathlib
 
 # 构造 DLL 的绝对路径（相对于本脚本所在目录）
-dll_path = pathlib.Path(__file__).parent / "build" / "msvc-release" / "bin" / "LIB.dll"
+dll_path = pathlib.Path(__file__).parent / "bin" / "LIB.dll"
 
 # 加载 DLL，之后可以通过 lib 调用其中导出的函数
 lib = ctypes.CDLL(str(dll_path))
